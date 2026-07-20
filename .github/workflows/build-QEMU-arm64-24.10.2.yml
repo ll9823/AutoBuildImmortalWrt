@@ -94,3 +94,9 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          - name: Upload Artifact
+  uses: actions/upload-artifact@v6  # 升级到 v6 或更新版本以原生支持 Node 24
+  with:
+    name: my-artifact
+    path: path/to/dist/
+
