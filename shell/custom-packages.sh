@@ -36,3 +36,8 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-store"
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-netwizard luci-i18n-netwizard-zh-cn"
 # Lucky大吉 
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-lucky lucky"
+- name: Upload Artifact
+  uses: actions/upload-artifact@v6  # 升级到 v6 或更新版本以原生支持 Node 24
+  with:
+    name: my-artifact
+    path: path/to/dist/
